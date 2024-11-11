@@ -70,7 +70,10 @@ const PreferenceForm: React.FC<PreferenceFormProps> = ({ onSubmit }) => {
           <option value="fall">Fall</option>
         </select>
       </label>
-      <button type="submit" className="bg-green-500 text-white p-2 rounded">
+      <button
+        type="submit"
+        className="bg-green-500 text-white p-2 rounded py-[1%] px-[5%] cursor-pointer hover:bg-teal-500 transition-colors duration-200 hover:opacity-90"
+      >
         Get Recommendations
       </button>
     </form>

@@ -33,7 +33,7 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div className="p-4">
+    <div className="p-4 px-[20%]">
       <PreferenceForm onSubmit={fetchRecommendations} />
       {recommendations.length > 0 && (
         <Recommendations recommendations={recommendations} />
