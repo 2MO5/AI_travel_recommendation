@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import PreferenceForm from "../components/PreferenceForm";
 import Recommendations from "../components/Recommendations";
+import Navbar from "../components/Navbar";
 
 interface FormData {
   budget: number;
@@ -33,12 +34,15 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div className="p-4 px-[20%]">
-      <PreferenceForm onSubmit={fetchRecommendations} />
-      {recommendations.length > 0 && (
-        <Recommendations recommendations={recommendations} />
-      )}
-    </div>
+    <>
+      <Navbar />
+      <div className="p-4 px-[20%]">
+        <PreferenceForm onSubmit={fetchRecommendations} />
+        {recommendations.length > 0 && (
+          <Recommendations recommendations={recommendations} />
+        )}
+      </div>
+    </>
   );
 };
 

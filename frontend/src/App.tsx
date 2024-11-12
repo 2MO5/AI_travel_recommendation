@@ -96,7 +96,7 @@ const App: React.FC = () => {
 
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <Router>
         <Routes>
           {/* Home route */}
