@@ -1,0 +1,41 @@
+# Byte-compiled files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+venv/
+env/
+*.env
+
+# Python egg files
+*.egg
+*.egg-info/
+dist/
+build/
+*.whl
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+
+# Cache and temporary files
+*.bak
+*.swp
+*.tmp
+*.lock
+*.pid
+*.seed
+*.manifest
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Backup or submission zips
+*.zip
+*.tar
+submission.zip
