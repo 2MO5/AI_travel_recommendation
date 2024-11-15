@@ -1,0 +1,28 @@
+import pandas as pd
+from sklearn.neighbors import NearestNeighbors
+from sklearn.preprocessing import MinMaxScaler
+import joblib
+
+# Load the dataset
+data = pd.read_csv("app/data/destinations.csv")
+
+# Ensure there are no missing values
+data.fillna(method="ffill", inplace=True)
+
+# Select relevant features
+# Adjust based on your dataset's structure
+features = data[["average_cost", "popularity_score", "season_score"]]
+
+# Normalize features
+scaler = MinMaxScaler()
+scaled_features = scaler.fit_transform(features)
+
+# Train a Nearest Neighbors model
+model = NearestNeighbors(n_neighbors=5, metric="euclidean")
+model.fit(scaled_features)
+
+# Save the model and the scaler
+joblib.dump(model, "app/models/recommendation_model.pkl")
+joblib.dump(scaler, "app/models/scaler.pkl")  # Save the scaler for preprocessing
+
+print("Model and scaler trained and saved successfully!")
