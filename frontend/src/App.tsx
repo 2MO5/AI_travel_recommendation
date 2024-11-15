@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Results from "./pages/Results";
+import Details from "./pages/Details";
 const App: React.FC = () => {
   const [recommendations, setRecommendations] = useState([
     {
@@ -104,9 +105,10 @@ const App: React.FC = () => {
 
           {/* Results route, passing recommendations as props */}
           <Route
-            path="/results"
+            path="/destination"
             element={<Results recommendations={recommendations} />}
           />
+          <Route path="/destination/:destinationId" element={<Details />} />
         </Routes>
       </Router>
     </div>
