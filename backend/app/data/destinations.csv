@@ -1,0 +1,31 @@
+id,name,description,location,category,rating,cost
+1,Paris,"City of lights, famous for the Eiffel Tower",France,Cultural,4.8,$$$
+2,Tokyo,Known for modernity and traditional temples,Japan,Adventure,4.7,$$$
+3,Sydney,Famous for the Opera House and harbor,Australia,Nature,4.6,$$$
+4,Bali,Tropical paradise with beaches and temples,Indonesia,Relaxation,4.9,$$
+5,New York,"The city that never sleeps, full of skyscrapers",USA,Urban,4.7,$$$$
+6,London,Rich in history with landmarks like the Tower of London,UK,Cultural,4.6,$$$
+7,Cape Town,Stunning landscapes with mountains and beaches,South Africa,Nature,4.8,$$
+8,Barcelona,Famous for architecture and Mediterranean beaches,Spain,Urban,4.7,$$$
+9,Rome,Historical city with ancient ruins like the Colosseum,Italy,Cultural,4.8,$$
+10,Kyoto,Known for its temples and traditional tea houses,Japan,Cultural,4.9,$$
+11,Cairo,Home to the Great Pyramids and ancient Egyptian history,Egypt,Cultural,4.5,$$
+12,Reykjavik,"Capital of Iceland, surrounded by nature and hot springs",Iceland,Nature,4.7,$$
+13,Rio de Janeiro,"Famous for its Carnival, beaches, and the Christ the Redeemer statue",Brazil,Adventure,4.6,$$
+14,Amsterdam,"Charming canals, museums, and bike-friendly streets",Netherlands,Urban,4.5,$$
+15,Dubai,Modern city with futuristic architecture and luxury,UAE,Urban,4.8,$$$$
+16,London,Big Ben and the bustling streets of the West End,UK,Urban,4.6,$$$
+17,Moscow,Rich in history with the Kremlin and Red Square,Russia,Cultural,4.4,$$
+18,Hawaii,Tropical islands with stunning beaches and volcanic landscapes,USA,Nature,4.9,$$
+19,Seoul,Futuristic tech meets traditional palaces,South Korea,Urban,4.7,$$$
+20,Bangkok,"Vibrant street life, temples, and the Grand Palace",Thailand,Adventure,4.6,$$
+21,Los Angeles,"Hollywood, beaches, and cultural hotspots",USA,Urban,4.5,$$$
+22,Vancouver,"Beautiful city with mountains, parks, and the Pacific Ocean",Canada,Nature,4.8,$$
+23,Shanghai,Fast-paced city with modern skyscrapers and ancient temples,China,Urban,4.7,$$$
+24,Budapest,"Rich in history, thermal baths, and stunning architecture",Hungary,Cultural,4.6,$$
+25,Santorini,Iconic white buildings and breathtaking sunsets,Greece,Relaxation,4.9,$$
+26,Lisbon,Beautiful coastal city with historic neighborhoods,Portugal,Urban,4.6,$$
+27,Hong Kong,A vibrant mix of East and West with stunning skyline,China,Urban,4.7,$$$
+28,Prague,Beautiful medieval city with a rich cultural history,Czech Republic,Cultural,4.8,$$
+29,Sydney,Famous for its Opera House and beautiful beaches,Australia,Nature,4.7,$$$
+30,Edinburgh,Historical city with castles and cultural festivals,Scotland,Cultural,4.7,$$
