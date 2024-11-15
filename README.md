@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Travel Recommendation System is an AI-powered application designed to assist solo travelers and small groups in finding suitable travel destinations based on their preferences, budget, and interests. This project aims to provide personalized travel recommendations, enhancing the user experience and simplifying the decision-making process for travel enthusiasts.
+The Travel Recommendation System is an AI-powered application designed to assist solo travelers and small groups in finding suitable travel destinations based on their preferences, budget, and interests. This mini project implementation aims to provide personalized travel recommendations, enhancing the user experience and simplifying the decision-making process for travel enthusiasts.
 
 ## Features
 

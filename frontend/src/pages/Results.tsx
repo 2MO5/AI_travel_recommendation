@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../components/Navbar";
+import { useNavigate } from "react-router-dom";
 
 type Destination = {
   name: string;
@@ -14,6 +15,8 @@ interface ResultsPageProps {
 }
 
 const Results: React.FC<ResultsPageProps> = ({ recommendations }) => {
+  const navigate = useNavigate();
+
   return (
     <>
       <Navbar />
@@ -44,7 +47,10 @@ const Results: React.FC<ResultsPageProps> = ({ recommendations }) => {
                 ))}
               </ul>
 
-              <button className="mt-8 bg-green-600 text-white py-2 px-6 py-2 rounded">
+              <button
+                className="mt-8 bg-green-600 text-white py-2 px-6 py-2 rounded"
+                onClick={() => navigate("/results/details/${destination.id}")}
+              >
                 Learn More
               </button>
             </div>

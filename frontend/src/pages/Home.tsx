@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import PreferenceForm from "../components/PreferenceForm";
-import Recommendations from "../components/Recommendations";
 import Navbar from "../components/Navbar";
+import { useNavigate } from "react-router-dom";
 
 interface FormData {
   budget: number;
   interests: string;
   season: string;
 }
+
 interface Recommendation {
+  id: string; // Make sure this aligns with your API response
   name: string;
   category: string;
   average_cost: number;
@@ -16,20 +18,34 @@ interface Recommendation {
 }
 
 const Home: React.FC = () => {
-  const [recommendations, setRecommendations] = useState<Recommendation[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const navigate = useNavigate();
 
   const fetchRecommendations = async (formData: FormData) => {
+    setLoading(true);
+    setError(null);
+
     try {
-      const response = await fetch("http://localhost:5000/recommend", {
+      const response = await fetch("http://localhost:5000/destinations", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
 
+      if (!response.ok) {
+        throw new Error("Failed to fetch recommendations.");
+      }
+
       const recommendationsData = await response.json();
-      setRecommendations(recommendationsData.recommendations);
+      const recommendations = recommendationsData.recommendations;
+
+      // Navigate to Results page with recommendations as state
+      navigate("/results", { state: { recommendations } });
     } catch (error) {
-      console.log("error fetching recommendations: ", error);
+      setError((error as Error).message);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -38,9 +54,8 @@ const Home: React.FC = () => {
       <Navbar />
       <div className="p-4 px-[20%]">
         <PreferenceForm onSubmit={fetchRecommendations} />
-        {recommendations.length > 0 && (
-          <Recommendations recommendations={recommendations} />
-        )}
+        {loading && <p>Loading recommendations...</p>}
+        {error && <p className="text-red-500">Error: {error}</p>}
       </div>
     </>
   );
